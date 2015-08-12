@@ -217,15 +217,8 @@ education.display = function () {
 /* Misc */
 
 function init() {
-    $("#main").append(internationalizeButton);
     $("#mapDiv").append(googleMap);
 }
-
-function inName(name) {
-    var names = name.split(" ");
-    return names[0] + " " + names[1].toUpperCase();
-}
-
 
 /* Display Resume */
 
