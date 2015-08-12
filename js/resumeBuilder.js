@@ -218,7 +218,7 @@ education.display = function () {
 
 function init() {
     $("#main").append(internationalizeButton);
-    $("#map-div").append(googleMap);
+    $("#mapDiv").append(googleMap);
 }
 
 function inName(name) {
