@@ -222,9 +222,7 @@ function init() {
 }
 
 function inName(name) {
-    console.log(name);
     var names = name.split(" ");
-
     return names[0] + " " + names[1].toUpperCase();
 }
 
