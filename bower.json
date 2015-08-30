@@ -1,0 +1,25 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "version": "2.0.0",
+  "description": "Second project for Udacity's Front-End Web Developer Nanodegree Programme",
+  "main": "index.html",
+  "homepage": "https://github.com/milanfort/frontend-nanodegree-resume",
+  "keywords": [
+    "udacity",
+    "nanodegree",
+    "resume"
+  ],
+  "authors": [
+    "Milan Fort <http://www.milanfort.com/>"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
