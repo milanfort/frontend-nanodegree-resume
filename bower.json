@@ -13,6 +13,7 @@
     "Milan Fort <http://www.milanfort.com/>"
   ],
   "dependencies": {
+    "handlebars": "~4.0.2",
     "jquery": "~2.1.4"
   },
   "ignore": [

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/helper.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
@@ -13,7 +14,6 @@
 <body>
 <div id="main">
     <div id="header" class="center-content clear-fix">
-        <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
@@ -30,10 +30,85 @@
     </div>
     <div id="lets-connect" class="dark-gray">
         <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-        </ul>
     </div>
 </div>
+<script id="headerTemplate" type="text/x-handlebars-template">
+    <h1 id="name">{{ name }}</h1>
+    <span>{{ role }}</span>
+    <hr>
+    {{#with contacts}}
+    <ul id="topContacts" class="flex-box">
+        <li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">{{ mobile }}</span></li>
+        <li class="flex-item"><span class="orange-text">email</span><span class="white-text">{{ email }}</span></li>
+        <li class="flex-item"><span class="orange-text">github</span><span class="white-text">{{ github }}</span></li>
+        <li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">{{ twitter }}</span></li>
+        <li class="flex-item"><span class="orange-text">location</span><span class="white-text">{{ location }}</span></li>
+    </ul>
+    {{/with}}
+    <img src="{{ biopic }}" class="biopic">
+    <span class="welcome-message">{{ welcomeMessage }}</span>
+    <h3 id="skills-h3">Skills at a Glance:</h3>
+    <ul id="skills" class="flex-box">
+        {{#each skills}}
+        <li class="flex-item"><span class="white-text">{{ this }}</span></li>
+        {{/each}}
+    </ul>
+</script>
+<script id="contactsTemplate" type="text/x-handlebars-template">
+    {{#with contacts}}
+    <ul id="footerContacts" class="flex-box">
+        <li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">{{ mobile }}</span></li>
+        <li class="flex-item"><span class="orange-text">email</span><span class="white-text">{{ email }}</span></li>
+        <li class="flex-item"><span class="orange-text">github</span><span class="white-text">{{ github }}</span></li>
+        <li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">{{ twitter }}</span></li>
+        <li class="flex-item"><span class="orange-text">location</span><span class="white-text">{{ location }}</span></li>
+    </ul>
+    {{/with}}
+</script>
+<script id="workExperienceTemplate" type="text/x-handlebars-template">
+    {{#each jobs}}
+    <div class="work-entry">
+        <a href="#">{{ employer }} - {{ title }}</a>
+        <div class="date-text">{{ dates }}</div>
+        <div class="location-text">{{ location }}</div>
+        <p><br>{{ description }}</p>
+    </div>
+    {{/each}}
+</script>
+<script id="projectsTemplate" type="text/x-handlebars-template">
+    {{#each projects}}
+    <div class="project-entry">
+        <a href="#">{{ title }}</a>
+        <div class="date-text">{{ dates }}</div>
+        <p><br>{{ description }}</p>
+        {{#each images}}
+        <img src="{{ this }}">
+        {{/each}}
+    </div>
+    {{/each}}
+</script>
+<script id="educationTemplate" type="text/x-handlebars-template">
+    {{#each schools}}
+    <div class="education-entry">
+        <a href="{{ url }}">{{ name }} -- {{ degree }}</a>
+        <div class="date-text">{{ dates }}</div>
+        <div class="location-text">{{ location }}</div>
+        <em><br>Major:
+            {{#each majors}}
+            {{ this }}{{#unless @last}},{{/unless}}
+            {{/each}}
+        </em>
+    </div>
+    {{/each}}
+    <h3>Online Classes</h3>
+    {{#each onlineCourses}}
+    <div class="education-entry">
+        <a href="{{ url }}">{{ title }} - {{ school }}</a>
+        <div class="date-text">{{ date }}</div>
+        <br>
+    </div>
+    {{/each}}
+</script>
 <script src="js/resumeBuilder.js"></script>
 </body>
 </html>
