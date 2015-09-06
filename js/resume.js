@@ -18,7 +18,7 @@ var resume = (function () {
     var init = function () {
         console.info("Initializing module resume");
         resume.content.init();
-        //resume.map.init();
+        resume.map.init();
     };
 
     return { init: init };
