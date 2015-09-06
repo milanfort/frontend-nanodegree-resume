@@ -1,0 +1,14 @@
+{
+  "name": "John Doe",
+  "role": "Software Engineer",
+  "contacts": {
+    "mobile": "650-555-7777",
+    "email": "john.doe@gmail.com",
+    "github": "johndoe",
+    "twitter": "@johndoe",
+    "location": "San Francisco"
+  },
+  "welcomeMessage": "Welcome to my site! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque pellentesque tellus, id mollis sapien consequat non. Sed sollicitudin et eros ut pretium. Praesent dapibus in turpis sed placerat. Aliquam luctus convallis velit, sed bibendum tellus pharetra id.",
+  "skills": ["HTML5", "CSS3", "JavaScript", "Node.js", "CouchDB"],
+  "biopic": "images/fry.jpg"
+}

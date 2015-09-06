@@ -1,0 +1,40 @@
+{
+  "schools": [
+    {
+      "name": "Massachusetts Institute of Technology",
+      "location": "Cambridge, MA, US",
+      "degree": "M.Sc.",
+      "majors" : ["Software Engineering", "Data Science"],
+      "dates": "2005-2009",
+      "url": "http://web.mit.edu"
+    },
+    {
+      "name": "Stanford University",
+      "location": "Palo Alto, CA, US",
+      "degree": "B.Sc.",
+      "majors" : ["Computer Science"],
+      "dates": "2000-2004",
+      "url": "https://www.stanford.edu"
+    }
+  ],
+  "onlineCourses": [
+    {
+      "title": "Principles of Reactive Programming",
+      "school": "École Polytechnique Fédérale de Lausanne",
+      "date": "2015",
+      "url": "https://www.coursera.org/course/reactive"
+    },
+    {
+      "title": "Statistical Learning",
+      "school": "Stanford University",
+      "date": "2015",
+      "url": "https://statlearning.class.stanford.edu"
+    },
+    {
+      "title": "Data Analysis and Statistical Inference",
+      "school": "Duke University",
+      "date": "2014",
+      "url": "https://www.coursera.org/course/statistics"
+    }
+  ]
+}
