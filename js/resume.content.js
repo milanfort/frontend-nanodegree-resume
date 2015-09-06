@@ -41,8 +41,6 @@ resume.content = (function () {
     };
 
     init = function () {
-        console.info("Initializing module resume.content");
-
         display('bio.json', 'headerTemplate', 'header');
         display('bio.json', 'contactsTemplate', 'lets-connect');
         display('work.json', 'workExperienceTemplate', 'workExperience');

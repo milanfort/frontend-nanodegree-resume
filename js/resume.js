@@ -16,7 +16,6 @@ var resume = (function () {
     'use strict';
 
     var init = function () {
-        console.info("Initializing module resume");
         resume.content.init();
         resume.map.init();
     };

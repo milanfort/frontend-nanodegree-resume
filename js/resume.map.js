@@ -169,8 +169,6 @@ resume.map = (function () {
     }
 
     init = function () {
-        console.info("Initializing module resume.map");
-
         $("#mapDiv").append('<div id="map"></div>');
 
         //Calls the initializeMap() function when the page loads
